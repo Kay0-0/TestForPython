@@ -122,8 +122,13 @@ for i in range(0, 20, 1):
 for i in range(20):
     print("i: ", i)
 '''
+'''
+while 조건:
+    수행문
+'''
 
 # 1부터 10까지 합 구하기
+'''
 sum = 0
 for i in 1, 2, 3, 4, 5, 6, 7, 8, 9, 10:
     sum+=i
@@ -131,6 +136,71 @@ print(sum)
 sum=0
 for i in range(11):
     sum+=i
+else:
+    print("else 안의 문구: for문이 잘 종료됨")
+print("esle 밖의 문구: for문 종료됨.")
 print(sum)
 '''
 '''
+n = 1
+sum = 0
+while n<=10:
+    sum+=n
+    n+=1
+print(sum)
+while True:
+    print("무한루프")
+while False:
+    print("실행되지 않음")
+while 0:
+    print("실행되지 않음")
+'''
+
+#break continue
+'''
+#단어 입력을 무한 루프로 받는다.
+# 그 글자를 3번 써줌
+# "exit" -> 루프를 끝내고 종료
+# "apple" -> 3번 안쓰고 그냥 다시 단어 입력을 받음.
+while 1:
+    word = input("단어를 입력하세요: ")
+    if word == "exit":
+        break
+        print("break 뒤의 문장")
+    elif word == "apple":
+        continue
+        print("continue 뒤의 문장")
+    else:
+        for i in range (3):
+            print(word)
+    print("apple을 넣으면 이 문장을 절대 볼 수 없음")
+print("while문 종료")
+'''
+
+# 놀이동산 놀이기구 탑승 문제
+# 총 정원 4명
+# 정원이 차면, 놀이기구 시작
+# 조건 키 150 이상만 탈 수 있음
+# 사람들에게 키를 물어보고, 탑승시키시오.
+# 150 이상 4명이 되면 놀이기구를 시작
+# 수도코드 작성해볼 것
+
+while 1:
+    member = 0
+    member2 = 0
+    service = input("운행을 하겠습니까?(o, x) ")
+    if service == "o":
+        while member2<4:
+            print((str)(member+1)+"번째 손님")
+            height = input("키가 150 이상인가요?")
+            if height == "o":
+                print("탑승하시오.")
+                member2+=1
+            else :
+                print("탑승 불가합니다.")
+            member+=1
+        print("운행 시작합니다.")
+    else:
+        "운행 정지합니다."
+        break
+print("운행 종료")

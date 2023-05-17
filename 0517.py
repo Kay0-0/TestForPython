@@ -118,5 +118,5 @@ for i in range(10) :
     sub = driver.find_element(By.XPATH, f"/html/body/div[3]/div[3]/div[1]/div[1]/div[1]/div[2]/div[1]/table/tbody/tr[{i+1}]/td[3]").text
     lst3.append(sub)
 
-a = zip(sub, sub1, sub2, sub3)
+a = list(zip(sub, sub1, sub2, sub3))
 print(a)
